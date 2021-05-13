@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "em-testing:item/custom_test_item"
+      "layer0": "em-testing:item/aux_a"
     }
   }

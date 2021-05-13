@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "" : { "model" : "em-testing:block/base_c" }
+    }
+}
