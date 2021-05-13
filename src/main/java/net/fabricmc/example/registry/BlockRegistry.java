@@ -12,12 +12,6 @@ public enum BlockRegistry {
     base_c(Material.METAL, 4.0f, 1000.0f),
     base_d(Material.METAL, 4.0f, 1000.0f),
     base_e(Material.METAL, 4.0f, 1000.0f),
-    
-    dimension_a(Material.METAL, 4.0f, 1000.0f),
-    dimension_b(Material.METAL, 4.0f, 1000.0f),
-    dimension_c(Material.METAL, 4.0f, 1000.0f),
-    dimension_d(Material.METAL, 4.0f, 1000.0f),
-    dimension_e(Material.METAL, 4.0f, 1000.0f),
 
     extractor_a(Material.METAL, 4.0f, 1000.0f),
     extractor_b(Material.METAL, 4.0f, 1000.0f),

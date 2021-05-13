@@ -14,7 +14,9 @@ public enum ItemRegistry {
     aux_b(),
     aux_c(),
     aux_d(),
-    aux_e();
+    aux_e(),
+    
+    axetest();
 
 
     public final Item item;

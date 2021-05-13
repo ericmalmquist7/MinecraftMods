@@ -39,6 +39,11 @@ public class RegisterHelper {
             Registry.register(Registry.BLOCK, new Identifier(ExampleMod.MOD_ID_STRING, block.toString()), block.block);
             Registry.register(Registry.ITEM,  new Identifier(ExampleMod.MOD_ID_STRING, block.toString()), block.blockItem);
         }
+        
+        for(DimensionBlockRegistry block : DimensionBlockRegistry.values()){
+            Registry.register(Registry.BLOCK, new Identifier(ExampleMod.MOD_ID_STRING, block.toString()), block.block);
+            Registry.register(Registry.ITEM,  new Identifier(ExampleMod.MOD_ID_STRING, block.toString()), block.blockItem);
+        }
     }
 
 	 

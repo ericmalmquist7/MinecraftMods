@@ -15,13 +15,6 @@ public class ExampleMod implements ModInitializer {
 	public static final String MOD_ID_STRING = "em-testing";
 	public static final String MOD_NAME_STRING = "Ether";
 
-	public static final CustomFabricItem ICON_ITEM = new CustomFabricItem(
-		new Item.Settings());
-
-
-	public static final CustomFabricItem TEST_ITEM = new CustomFabricItem(
-		new Item.Settings().group(RegisterHelper.MOD_GROUP).maxDamage(100));
-
 	public static final ToolItem CUSTOMSWORD_ITEM = new CustomSwordItem(CustomSwordMaterial.INSTANCE, 5, 4.0F, new Item.Settings().group(RegisterHelper.MOD_GROUP) );
 
 	@Override
@@ -32,11 +25,6 @@ public class ExampleMod implements ModInitializer {
 
 		RegisterHelper.initRegistry();
 		
-		Registry.register(Registry.ITEM, new Identifier("em-testing", "custom_test_item"), TEST_ITEM);
-		Registry.register(Registry.ITEM, new Identifier("em-testing", "custom_sword_item"), CUSTOMSWORD_ITEM);
-
-
-
 		System.out.println("Registered Items");
 	}
 }
