@@ -25,6 +25,7 @@ public class ExampleMod implements ModInitializer {
 
 		RegisterHelper.initRegistry();
 		
-		System.out.println("Registered Items");
+		
 	}
+
 }

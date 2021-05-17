@@ -1,16 +1,22 @@
 package net.fabricmc.example;
 
 import net.fabricmc.example.registry.BlockRegistry;
+import net.fabricmc.example.registry.RegisterHelper;
 import net.fabricmc.example.registry.DimensionBlockRegistry;
+import net.fabricmc.fabric.api.dimension.v1.FabricDimensions;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.TeleportTarget;
 import net.minecraft.world.World;
 
 public class DimensionBlock extends Block{
@@ -43,7 +49,13 @@ public class DimensionBlock extends Block{
 
             if (this.multiblock_built)
             {
-                player.sendMessage(new LiteralText("Ether envelopes you... [TELEPORT]"), false);
+                player.sendMessage(new LiteralText("Ether floods your mind, enveloping you.."), false);
+
+                TeleportTarget target = new TeleportTarget(Vec3d.ZERO, new Vec3d(1, 1, 1), 45f, 60f);
+                ServerWorld server_world = player.getServer().getWorld(RegisterHelper.WORLD_KEY);
+                
+                Entity teleported = FabricDimensions.teleport(player, server_world, target);
+                if (teleported == null) throw new AssertionError("Entity didn't teleport");
             }
         }
 

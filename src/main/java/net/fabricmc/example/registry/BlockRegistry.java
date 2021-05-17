@@ -19,13 +19,12 @@ public enum BlockRegistry {
     extractor_d(Material.METAL, 4.0f, 1000.0f),
     extractor_e(Material.METAL, 4.0f, 1000.0f);
 
-
     public final Block block;
-    public final BlockItem blockItem;
+    public final BlockItem block_item;
 
     BlockRegistry(Material material, float hardness, float resistance){
         
         this.block = new Block(FabricBlockSettings.of(material).strength(hardness, resistance));
-        this.blockItem = new BlockItem(this.block, new FabricItemSettings().group(RegisterHelper.MOD_GROUP));
+        this.block_item = new BlockItem(this.block, new FabricItemSettings().group(RegisterHelper.MOD_GROUP));
     }
 }

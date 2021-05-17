@@ -3,7 +3,6 @@ package net.fabricmc.example.registry;
 import net.fabricmc.example.DimensionBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 
@@ -17,11 +16,11 @@ public enum DimensionBlockRegistry {
 
 
     public final DimensionBlock block;
-    public final BlockItem blockItem;
+    public final BlockItem block_item;
 
     DimensionBlockRegistry(Material material, float hardness, float resistance){
         
         this.block = new DimensionBlock(FabricBlockSettings.of(material).strength(hardness, resistance));
-        this.blockItem = new BlockItem(this.block, new FabricItemSettings().group(RegisterHelper.MOD_GROUP));
+        this.block_item = new BlockItem(this.block, new FabricItemSettings().group(RegisterHelper.MOD_GROUP));
     }
 }

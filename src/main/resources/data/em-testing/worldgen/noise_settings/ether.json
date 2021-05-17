@@ -1,0 +1,53 @@
+{
+    "bedrock_roof_position": -10,
+    "bedrock_floor_position": -10,
+    "sea_level": 3,
+    "disable_mob_generation": false,
+    "structures": {
+      "structures": {
+        "minecraft:ruined_portal": {
+          "spacing": 30,
+          "separation": 15,
+          "salt": 123120
+        }
+      }
+    },
+  
+    "noise": {
+      "min_y": 0,
+      "height": 256,
+      "size_horizontal": 1,
+      "size_vertical": 4,
+      "density_factor": 0,
+      "density_offset": 0,
+      "simplex_surface_noise": true,
+      "random_density_offset": false,
+      "island_noise_override": false,
+      "amplified": false,
+      "sampling": {
+        "xz_scale": 2.0,
+        "xz_factor": 360.0,
+        "y_scale": 8.0,
+        "y_factor": 80.0
+      },
+      "top_slide": {
+        "target": -10,
+        "size": 10,
+        "offset": 3
+    },
+      "bottom_slide": {
+        "target": -10,
+        "size": 10,
+        "offset": 1
+      }
+    },
+    "default_block": {
+      "Name": "minecraft:cobblestone"
+    },
+    "default_fluid": {
+      "Properties": {
+        "level": "0"
+      },
+      "Name": "minecraft:milk"
+    }
+  }
